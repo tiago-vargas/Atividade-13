@@ -11,4 +11,4 @@ class Graph:
 		return len(self._adjacency_matrix)
 
 	def _count_edges(self) -> int:
-		return sum(sum(row) for row in self._adjacency_matrix) / 2
+		return sum(sum(row) for row in self._adjacency_matrix) // 2
