@@ -2,28 +2,28 @@ from fun import *
 
 
 class TestPlanarity:
-	def test_if_k3_is_planar(self):
+	def test_if_k_3_is_planar(self):
 		adjacency_matrix = [
 			[0, 1, 1],
 			[1, 0, 1],
 			[1, 1, 0],
 		]
-		graph = Graph(adjacency_matrix)
+		k_3 = Graph(adjacency_matrix)
 
-		assert graph.is_planar() is True
+		assert k_3.is_planar() is True
 
-	def test_if_k4_is_planar(self):
+	def test_if_k_4_is_planar(self):
 		adjacency_matrix = [
 			[0, 1, 1, 1],
 			[1, 0, 1, 1],
 			[1, 1, 0, 1],
 			[1, 1, 1, 0],
 		]
-		graph = Graph(adjacency_matrix)
+		k_4 = Graph(adjacency_matrix)
 
-		assert graph.is_planar() is True
+		assert k_4.is_planar() is True
 
-	def test_if_k3_2_is_planar(self):  # K3,2
+	def test_if_k_3_2_is_planar(self):  # K3,2
 		adjacency_matrix = [
 			[0, 0, 1, 1, 1],
 			[0, 0, 1, 1, 1],
@@ -31,11 +31,11 @@ class TestPlanarity:
 			[1, 1, 0, 0, 0],
 			[1, 1, 0, 0, 0],
 		]
-		graph = Graph(adjacency_matrix)
+		k_3_2 = Graph(adjacency_matrix)
 
-		assert graph.is_planar() is True
+		assert k_3_2.is_planar() is True
 
-	def test_if_k5_is_planar(self):
+	def test_if_k_5_is_planar(self):
 		adjacency_matrix = [
 			[0, 1, 1, 1, 1],
 			[1, 0, 1, 1, 1],
@@ -43,6 +43,6 @@ class TestPlanarity:
 			[1, 1, 1, 0, 1],
 			[1, 1, 1, 1, 0],
 		]
-		graph = Graph(adjacency_matrix)
+		k_5 = Graph(adjacency_matrix)
 
-		assert graph.is_planar() is False
+		assert k_5.is_planar() is False
