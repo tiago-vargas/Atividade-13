@@ -28,3 +28,27 @@ class Graph:
 			if sum(row) != degree:
 				return False
 		return True
+
+
+import random
+
+
+def generate_random_incidence_matrix_with_6_faces() -> list[list[int]]:
+	f = 6
+	v = random.randint(1, 10)
+	e = v - 2 + f
+
+	incidence_matrix = [[0 for _ in range(e)] for _ in range(v)]  # Empty
+
+	for edge in range(e):
+		# Escolhe 2 vértices aleatórios
+		v1 = random.randint(0, v - 1)
+		v2 = random.randint(0, v - 1)
+		while v1 == v2:
+			v2 = random.randint(0, v - 1)
+
+		# Marca os vértices na matriz de incidência
+		incidence_matrix[v1][edge] = 1
+		incidence_matrix[v2][edge] = 1
+
+	return incidence_matrix
