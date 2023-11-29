@@ -45,4 +45,4 @@ class TestPlanarity:
 		]
 		graph = Graph(adjacency_matrix)
 
-		assert graph.is_planar() is None
+		assert graph.is_planar() is False
